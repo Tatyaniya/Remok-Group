@@ -1,0 +1,38 @@
+.offer {
+    padding-bottom: 90px;
+    
+    &__img {
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-bottom: 72px;
+    }
+
+    &__title {
+        font-size: 80px;
+        font-weight: 900;
+        letter-spacing: 0.32em;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    &__subtitle {
+        font-size: 40px;
+        letter-spacing: 0.24em;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    &__btns {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__btn--contact {
+        margin-right: 40px;
+        &:extend(.btn-light);
+    }
+
+    &__btn--cost {
+        &:extend(.btn-dark);
+    }
+}

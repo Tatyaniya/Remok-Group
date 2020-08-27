@@ -2,16 +2,17 @@ module.exports = {
 	columns: 12,
 	offset: "40px",
 	container: {
-		maxWidth: "1660px",
-		fields: "20px"
+		maxWidth: "1600px",
+		fields: "30px"
 	},
 	breakPoints: {
 		md: {
 			width: "992px",
-			fields: "15px"
+			fields: "20px"
 		},
 	   sm: {
-	      width: "768px"
+          width: "768px",
+          fields: "15px"
 	   },
 	   xs: {
 	      width: "576px"

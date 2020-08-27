@@ -2,7 +2,9 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="img/logo.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="img/logo.jpg" type="image/x-icon">
     <title>Remok Group</title>
 	<link rel="stylesheet" href="css/styles.css">
 </head>
@@ -80,68 +82,66 @@
                     <h1 class="offer__title">Remok Group</h1>
                     <div class="offer__subtitle">...все починається з стяжки</div>
                     <div class="offer__btns">                   
-                        <a href="#" class="offer__link">Зв’язатися з нами</a>
-                        <a href="#calc" class="offer__link">Розрахувати вартість</a>
+                        <button type="button" class="offer__btn offer__btn--contact">Зв’язатися з нами</button>
+                        <a href="#calc" class="offer__btn offer__btn--cost">Розрахувати вартість</a>
                     </div>
                 </div>
             </section>
             <section class="calc" id="calc">
                 <div class="container calc__container">
-                    <div class="cost calc__cost">
-                        <form action="#" class="calc__form">
-                            <div class="cost__area">
-                                <h4 class="cost__title">Площа</h4>
-                                <input type="text" class="cost__input" value="110 кв.м">
-                                <div id="area">
-                                    <span></span>
-                                </div>
-                                <div class="cost__value">
-                                    <span class="cost__min" id="areaMin">36 кв.м</span>
-                                    <span class="cost__max" id="areaMax">10 000 кв.м</span>
-                                </div>
+                    <form action="#" class="calc__form">
+                        <div class="calc__item calc__item--small">
+                            <h4 class="calc__title">Площа</h4>
+                            <input type="text" class="calc__input" value="110 кв.м">
+                            <div id="area" class="calc__range">
+                                <span></span>
                             </div>
-                            <div class="cost__screed">
-                                <h4 class="cost__title">Середня товщина стяжки</h4>
-                                <input type="text" class="cost__input" value="10 cм">
-                                <div id="screed">
-                                    <span></span>
-                                </div>
-                                <div class="cost__value">
-                                    <span class="cost__min" id="screedMin">6 см</span>
-                                    <span class="cost__max" id="screedMax">15 см</span>
-                                </div>
-                            </div>
-                            <div class="cost__material">
-                                <h4 class="cost__title">Матеріал</h4>
-
-                                <input type="radio" name="material" id="riverSand" value="riverSand">
-                                <label for="riverSand" class="cost__radio">річковий митий пісок (відсів)</label>
-
-                                <input type="radio" name="material" id="whiteSand" value="whiteSand">
-                                <label for="whiteSand" class="cost__radio">рогатинський білий пісок</label>
-
-                                <input type="radio" name="material" id="mixedSand" value="mixedSand">
-                                <label for="mixedSand" class="cost__radio">мішаний пісок</label>
-                                
-                            </div>
-                            <div class="cost__btn">
-                                <button type="submit" class="cost__btn">Розрахувати вартість</button>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="get calc__get">
-                        <div class="get__cost"></div>
-                        <div class="get__receiveByMail">
-                            <h4 class="get__title">Отримати розрахунок на пошту</h4>
-                            <div class="get__form">
-                                <form action="#" class="get__form">
-                                    <input type="email" name="email" placeholder="Ваш e-mail">
-                                    <button type="submit" class="get__btn">Відправити</button>
-                                </form>
+                            <div class="calc__value">
+                                <span class="calc__min" id="areaMin">36 кв.м</span>
+                                <span class="calc__max" id="areaMax">10 000 кв.м</span>
                             </div>
                         </div>
+                        <div class="calc__item calc__item--large">
+                            <h4 class="calc__title">Середня товщина стяжки</h4>
+                            <input type="text" class="calc__input" value="10 cм">
+                            <div id="screed" class="calc__range"                    >
+                                <span></span>
+                            </div>
+                            <div class="calc__value">
+                                <span class="calc__min" id="screedMin">6 см</span>
+                                <span class="calc__max" id="screedMax">15 см</span>
+                            </div>
+                        </div>
+                        <div class="calc__item calc__item--small">
+                            <h4 class="calc__title">Матеріал</h4>
+
+                            <input type="radio" name="material" id="riverSand" value="riverSand">
+                            <label for="riverSand" class="calc__radio">річковий митий пісок (відсів)</label>
+
+                            <input type="radio" name="material" id="whiteSand" value="whiteSand">
+                            <label for="whiteSand" class="calc__radio">рогатинський білий пісок</label>
+
+                            <input type="radio" name="material" id="mixedSand" value="mixedSand">
+                            <label for="mixedSand" class="calc__radio">мішаний пісок</label>
+                            
+                        </div>
+                        <div class="calc__item calc__item--large">
+                            <button type="submit" class="calc__btn">Розрахувати вартість</button>
+                        </div>
+                    </form>
+                    <div class="get calc__get">
+                        <div class="get__cost">Вартість роботи: 
+                            <span>7250 грн</span>
+                        </div>
+                        <div class="get__receiveByMail">
+                            <h4 class="get__title">Отримати розрахунок на пошту</h4>
+                            <form action="#" class="get__form">
+                                <input type="email" name="email" placeholder="Ваш e-mail">
+                                <button type="submit" class="get__btn">Відправити</button>
+                            </form>
+                        </div>
                     </div>
-                    <div class="calc__taxt">Вартість робіт за межами м. Івано-Франківськ обговорюється індивідуально</div>
+                    <div class="calc__text">Вартість робіт за межами м. Івано-Франківськ обговорюється індивідуально</div>
                 </div>
             </section>
             <section class="services" id="services">
@@ -152,43 +152,43 @@
                             <div class="services__icon">
                                 <img src="img/screed.svg" alt="screed">
                             </div>
-                            <h4 class="services__title">Напівсуха стяжка</h4>
-                            <div class="services__subtitle">для квартир, будинків та комерційних приміщень</div>
-                            <a href="#" class="reviews__link">Детальніше</a>
+                            <h3 class="services__subtitle">Напівсуха стяжка</h3>
+                            <div class="services__desc">для квартир, будинків та комерційних <br>приміщень</div>
+                            <a href="#" class="services__link">Детальніше</a>
                         </li>
                         <li class="services__item services__item--small">
                             <div class="services__icon">
                                 
                             </div>
-                            <h4 class="services__title"></h4>
-                            <a href="#" class="services__link">Детальніше</a>
+                            <h3 class="services__subtitle"></h3>
+                            <a href="#" class="services__link"></a>
                         </li>
                         <li class="services__item">
                             <div class="services__icon">
                                 <img src="img/building.svg" alt="building">
                             </div>
-                            <h4 class="services__title">Будівництво котеджів</h4>
+                            <h3 class="services__subtitle">Будівництво котеджів</h3>
                             <a href="#" class="services__link">Детальніше</a>
                         </li>
                         <li class="services__item">
                             <div class="services__icon">
                                 <img src="img/plumbing.svg" alt="plumbing">
                             </div>
-                            <h4 class="services__title">Монтаж сантехніки <br>та опалення</h4>
+                            <h3 class="services__subtitle">Монтаж сантехніки <br>та опалення</h3>
                             <a href="#" class="services__link">Детальніше</a>
                         </li>
                         <li class="services__item">
                             <div class="services__icon">
                                 <img src="img/repairs.svg" alt="repairs">
                             </div>
-                            <h4 class="reviews__title">Ремонт під ключ</h4>
-                            <a href="#" class="reviews__link">Детальніше</a>
+                            <h3 class="services__subtitle">Ремонт під ключ</h3>
+                            <a href="#" class="services__link">Детальніше</a>
                         </li>
                         <li class="services__item">
                             <div class="services__icon">
                                 <img src="img/landscape.svg" alt="landscape">
                             </div>
-                            <h4 class="services__title">Ландшафтний дизайн</h4>
+                            <h3 class="services__subtitle">Ландшафтний дизайн</h3>
                             <a href="#" class="services__link">Детальніше</a>
                         </li>
                     </ul>

@@ -1,8 +1,128 @@
 .calc {
-    margin-bottom: 123px;
-    
+    margin-bottom: 120px;
+
     &__container {
+        padding: 60px 75px 52px;
         box-shadow: 0px 1px 10px rgba(238, 215, 215, 0.25);
         border-radius: 15px;
+    }
+
+    &__form {
+        &:extend(.sg-row);
+        align-items: center;
+        margin-bottom: 43px;
+    }
+
+    &__item {
+        &:extend(.sg-col);
+        .size(3);
+        display: flex;
+        flex-direction: column;
+
+        &--small {
+            .size(2.7);
+        }
+
+        &--large {
+            .size(3.3);
+        }
+    }
+
+    &__title {
+        &:extend(.title-4);
+        margin-bottom: 26px;
+    }
+
+    &__input {
+        width: 178px;
+        height: 39px;
+        background: transparent;
+        border: 1px solid #BB955F;
+        border-radius: 5px;
+        padding-left: 12px;
+        font-size: 20px;
+            color: @white;
+        margin-bottom: 28px;
+    }
+
+    &__range {
+        width: 175px;
+        height: 2px;
+        background: @white;
+        position: relative;
+        margin-bottom: 24px;
+
+        & span {
+            display: inline-block;
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            background: @white;
+            position: absolute;
+            top: -5px;
+            left: 30px;
+        }
+    }
+
+    &__value {
+        display: flex;
+    }
+
+    &__min {
+        margin-right: 60px;
+    }
+    
+    &__btn {
+        &:extend(.btn-light);
+    }
+
+    &__text {
+        font-size: 30px;
+        text-align: center;
+    }
+}
+
+.get {
+    padding-top: 44px;
+    padding-bottom: 66px;
+
+    &__cost,
+    &__title {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 60px;
+
+        & span {
+            color: @white;
+        }
+    }
+
+    &__title {
+        color: @white;
+        margin-bottom: 30px;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 60px;
+
+        & input {
+            &:extend(.form-input);
+            margin-bottom: 16px;
+
+            &::placeholder {
+                font-family: 'Open Sans', sans-serif;
+                font-size: 18px;
+                color: @gray;
+            }
+        }
+    }
+
+    &__btn {
+        &:extend(.btn-light);
+        width: 330px;
     }
 }
