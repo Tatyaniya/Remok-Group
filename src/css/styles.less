@@ -1,0 +1,173 @@
+@import "vars.less";
+@import "smart-grid.less";
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Black.eot');
+    src: url('../fonts/Roboto-Black.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Roboto-Black.woff2') format('woff2'),
+        url('../fonts/Roboto-Black.woff') format('woff'),
+        url('../fonts/Roboto-Black.svg#Roboto-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Bold.eot');
+    src: url('../fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Roboto-Bold.woff2') format('woff2'),
+        url('../fonts/Roboto-Bold.woff') format('woff'),
+        url('../fonts/Roboto-Bold.svg#Roboto-Bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.eot');
+    src: url('../fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Roboto-Regular.woff2') format('woff2'),
+        url('../fonts/Roboto-Regular.woff') format('woff'),
+        url('../fonts/Roboto-Regular.svg#Roboto-Regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Myriad Pro';
+    src: url('../fonts/MyriadPro-Black.woff2') format('woff2'),
+        url('../fonts/MyriadPro-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Myriad Pro';
+    src: url('../fonts/MyriadPro-Bold.woff2') format('woff2'),
+        url('../fonts/MyriadPro-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+.reset();
+
+/*
+.debugGrid{
+	.debug(rgba(0, 0, 0, 0.3), 1px #ff0 solid);
+}
+*/
+
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+body {
+    font-family: 'Myriad Pro', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: @white;
+    background: #000;
+}
+
+.container{
+    .wrapper();
+    //overflow-x: hidden;
+}
+
+.sg-row {
+    .row-flex();
+}
+
+.sg-col {
+    .col();
+}
+
+a {
+	display: inline-block;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: @white;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+button {
+    border: none;
+}
+
+button:focus {
+    border: none;
+    outline: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+img {
+    display: block;
+}
+
+.Items {
+    &:extend(.sg-row);
+}
+
+.Item {
+    &:extend(.sg-col);
+    .size(4);
+}
+
+.btn {
+    width: 360px;
+    height: 77px;
+    border-radius: 50px;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 77px;
+    text-align: center;
+}
+
+.btn-light {
+    &:extend(.btn);
+    background: linear-gradient(180deg, #BB955F 0%, #F4C888 100%);
+    box-shadow: 0px 1px 10px rgba(198, 171, 133, 0.5);
+    color: @white;
+}
+
+.btn-dark {
+    &:extend(.btn);
+    border: 1px solid @yellow;
+    filter: drop-shadow(0px 1px 10px rgba(198, 171, 133, 0.5));
+    color: @yellow;
+}
+
+.title-2 {
+    font-size: 55px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.title-3 {
+    font-size: 35px;
+}
+
+.title-4 {
+    font-size: 30px;
+}
+
+
+@import "sections/header.less";
+@import "sections/offer.less";
+@import "sections/calc.less";
+@import "sections/services.less";
+@import "sections/stages.less";
+@import "sections/works.less";
+@import "sections/why.less";
+@import "sections/reviews.less";
+@import "sections/blog.less";
+@import "sections/footer.less";

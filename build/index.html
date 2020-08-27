@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+    <title>Remok Group</title>
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="debugGrid">
+        <div>
+            <div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <div class="wrap">
+        <header class="header">
+            <div class="container header__container">
+                <a href="index.html" class="header__logo">
+                    <img src="img/logo.png" alt="Remok Group">
+                </a>
+                <nav class="menu header__menu">
+                    <ul class="menu__list">
+                        <li>
+                            <a href="#services">Послуги</a>
+                        </li>
+                        <li>
+                            <a href="#works">Фото робіт</a>
+                        </li>
+                        <li>
+                            <a href="#">Про компанію</a>
+                        </li>
+                        <li>
+                            <a href="#calc">Розрахунок вартості</a>
+                        </li>
+                        <li>
+                            <a href="#whatSay">Відгуки</a>
+                        </li>
+                        <li>
+                            <a href="#footer">Контакти</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="phones header__phones">
+                    <a href="tel:+38050 7 000 117" class="phones__link">050 7 000 117</a>
+                    <a href="tel:+38068 4 101 552" class="phones__link">068 4 101 552</a>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <section class="offer">
+                <div class="container offer__container">
+                    <div class="offer__img">
+                        <img src="img/offer-rg.png" alt="RG">
+                    </div>
+                    <h1 class="offer__title">Remok Group</h1>
+                    <div class="offer__subtitle">...все починається з стяжки</div>
+                    <div class="offer__btns">                   
+                        <a href="#" class="offer__link">Зв’язатися з нами</a>
+                        <a href="#calc" class="offer__link">Розрахувати вартість</a>
+                    </div>
+                </div>
+            </section>
+            <section class="calc" id="calc">
+                <div class="container calc__container">
+                    <div class="cost calc__cost">
+                        <form action="#" class="calc__form">
+                            <div class="cost__area">
+                                <h4 class="cost__title">Площа</h4>
+                                <input type="text" class="cost__input" value="110 кв.м">
+                                <div id="area">
+                                    <span></span>
+                                </div>
+                                <div class="cost__value">
+                                    <span class="cost__min" id="areaMin">36 кв.м</span>
+                                    <span class="cost__max" id="areaMax">10 000 кв.м</span>
+                                </div>
+                            </div>
+                            <div class="cost__screed">
+                                <h4 class="cost__title">Середня товщина стяжки</h4>
+                                <input type="text" class="cost__input" value="10 cм">
+                                <div id="screed">
+                                    <span></span>
+                                </div>
+                                <div class="cost__value">
+                                    <span class="cost__min" id="screedMin">6 см</span>
+                                    <span class="cost__max" id="screedMax">15 см</span>
+                                </div>
+                            </div>
+                            <div class="cost__material">
+                                <h4 class="cost__title">Матеріал</h4>
+
+                                <input type="radio" name="material" id="riverSand" value="riverSand">
+                                <label for="riverSand" class="cost__radio">річковий митий пісок (відсів)</label>
+
+                                <input type="radio" name="material" id="whiteSand" value="whiteSand">
+                                <label for="whiteSand" class="cost__radio">рогатинський білий пісок</label>
+
+                                <input type="radio" name="material" id="mixedSand" value="mixedSand">
+                                <label for="mixedSand" class="cost__radio">мішаний пісок</label>
+                                
+                            </div>
+                            <div class="cost__btn">
+                                <button type="submit" class="cost__btn">Розрахувати вартість</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="get calc__get">
+                        <div class="get__cost"></div>
+                        <div class="get__receiveByMail">
+                            <h4 class="get__title">Отримати розрахунок на пошту</h4>
+                            <div class="get__form">
+                                <form action="#" class="get__form">
+                                    <input type="email" name="email" placeholder="Ваш e-mail">
+                                    <button type="submit" class="get__btn">Відправити</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calc__taxt">Вартість робіт за межами м. Івано-Франківськ обговорюється індивідуально</div>
+                </div>
+            </section>
+            <section class="services" id="services">
+                <div class="container services__container">
+                    <h2 class="services__title">Послуги від Remok Group</h2>
+                    <ul class="services__list">
+                        <li class="services__item services__item--large">
+                            <div class="services__icon">
+                                <img src="img/screed.svg" alt="screed">
+                            </div>
+                            <h4 class="services__title">Напівсуха стяжка</h4>
+                            <div class="services__subtitle">для квартир, будинків та комерційних приміщень</div>
+                            <a href="#" class="reviews__link">Детальніше</a>
+                        </li>
+                        <li class="services__item services__item--small">
+                            <div class="services__icon">
+                                
+                            </div>
+                            <h4 class="services__title"></h4>
+                            <a href="#" class="services__link">Детальніше</a>
+                        </li>
+                        <li class="services__item">
+                            <div class="services__icon">
+                                <img src="img/building.svg" alt="building">
+                            </div>
+                            <h4 class="services__title">Будівництво котеджів</h4>
+                            <a href="#" class="services__link">Детальніше</a>
+                        </li>
+                        <li class="services__item">
+                            <div class="services__icon">
+                                <img src="img/plumbing.svg" alt="plumbing">
+                            </div>
+                            <h4 class="services__title">Монтаж сантехніки <br>та опалення</h4>
+                            <a href="#" class="services__link">Детальніше</a>
+                        </li>
+                        <li class="services__item">
+                            <div class="services__icon">
+                                <img src="img/repairs.svg" alt="repairs">
+                            </div>
+                            <h4 class="reviews__title">Ремонт під ключ</h4>
+                            <a href="#" class="reviews__link">Детальніше</a>
+                        </li>
+                        <li class="services__item">
+                            <div class="services__icon">
+                                <img src="img/landscape.svg" alt="landscape">
+                            </div>
+                            <h4 class="services__title">Ландшафтний дизайн</h4>
+                            <a href="#" class="services__link">Детальніше</a>
+                        </li>
+                    </ul>
+                    <div class="services__order">
+                        <button type="button" class="services__btn">Замовити послугу</button>
+                    </div>
+                </div>
+            </section>
+            <section class="stages">
+                <div class="container stages__container">
+                    <div class="stages__content">
+                        <h2 class="stages__title">Етапи виконання роботи</h2>
+                        <ul class="stages__list">
+                            <li class="stages__item">
+                                <div class="stages__num">01</div>
+                                <div class="stages__text">Виїджаємо на об’єкт</div>
+                            </li>
+                            <li class="stages__item">
+                                <div class="stages__num">02</div>
+                                <div class="stages__text">Проводимо заміри</div>
+                            </li>
+                            <li class="stages__item">
+                                <div class="stages__num">03</div>
+                                <div class="stages__text">Визначаємо необхідну кількість <br>матеріалу</div>
+                            </li>
+                            <li class="stages__item">
+                                <div class="stages__num">04</div>
+                                <div class="stages__text">Погоджуємо дату роботи</div>
+                            </li>
+                            <li class="stages__item">
+                                <div class="stages__num">05</div>
+                                <div class="stages__text">Виконуємо роботу та здаємо <br>об’єкт замовнику в той же день</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="stages__img"></div>
+                </div>
+            </section>
+            <section class="works" id="works">
+                <div class="container works__container">
+                    <h2 class="works__title">Виконані роботи</h2>
+                    <div class="works__slider">
+                        <div class="works__slide">
+                            <img src="img/slide-work-1.jpg" alt="slide">
+                        </div>
+                        <div class="works__slide">
+                            <img src="img/slide-work-2.jpg" alt="slide">
+                        </div>
+                        <div class="works__slide">
+                            <img src="img/slide-work-1.jpg" alt="slide">
+                        </div>
+                        <div class="works__slide">
+                            <img src="img/slide-work-2.jpg" alt="slide">
+                        </div>
+                    </div>
+                </div>
+                <img src="img/arrow-prev.png" alt="prev">
+                <img src="img/arrow-next.png" alt="next">
+            </section>
+            <section class="why">
+                <div class="container why__container">
+                    <h2 class="why__title">Чому з нами вигідно</h2>
+                    <ul class="why__list">
+                        <li class="why__item">
+                            <div class="why__icon">
+                                <img src="img/why-icon.svg" alt="icon">
+                            </div>
+                            <div class="why__desc">
+                                Безкоштовні заміри <br>протягом 12 годин <br>після дзвінка
+                            </div>
+                        </li>
+                        <li class="why__item">
+                            <div class="why__icon">
+                                <img src="img/why-icon.svg" alt="icon">
+                            </div>
+                            <div class="why__desc">
+                                Термін виконання <br>роботи (до 200 кв.м) <br>- 1 день
+                            </div>
+                        </li>
+                        <li class="why__item">
+                            <div class="why__icon">
+                                <img src="img/why-icon.svg" alt="icon">
+                            </div>
+                            <div class="why__desc">
+                                Акуратність під час <br>роботи
+                            </div>
+                        </li>
+                        <li class="why__item">
+                            <div class="why__icon">
+                                <img src="img/why-icon.svg" alt="icon">
+                            </div>
+                            <div class="why__desc">
+                                Висихання стяжки <br>протягом 12 год
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="why__text">Обов'язково: наявність води та електроенергії</div>
+                </div>
+            </section>
+            <section class="whatSay" id="whatSay">
+                <div class="container whatSay__container">
+                    <h2 class="whatSay__title">Що говорять клієнти?</h2>
+                    <div class="whatSay__slider">
+                        <div class="whatSay__slide">
+                            <img src="img/video-1.jpg" alt="video">
+                            <div class="whatSay__icon"></div>
+                        </div>
+                        <div class="whatSay__slide">
+                            <img src="img/video-2.jpg" alt="video">
+                            <div class="whatSay__icon"></div>
+                        </div>
+                        <div class="whatSay__slide">
+                            <img src="img/video-3.jpg" alt="video">
+                            <div class="whatSay__icon"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="blog">
+                <div class="container blog__container">
+                    <h2 class="blog__title">Блог</h2>
+                    <div class="blog__slider">
+                        <div class="blog__slide">
+                            <div class="blog__img">
+                                <img src="img/blog-1.jpg" alt="blog image">
+                            </div>
+                            <h3 class="blog__title">Які послуги ми надаємо?</h3>
+                            <div class="blog__excerpt">Стяжка напівсуха - тривалість виконання  - 1 день...</div>
+                            <a href="#" class="blog__link">Читати далі</a>
+                        </div>
+                        <div class="blog__slide">
+                            <div class="blog__img">
+                                <img src="img/blog-1.jpg" alt="blog image">
+                            </div>
+                            <h3 class="blog__title">Я -твій персональний порадник.</h3>
+                            <div class="blog__excerpt">Сьогодні хочу розказати тобі про графік роботи...</div>
+                            <a href="#" class="blog__link">Читати далі</a>
+                        </div>
+                        <div class="blog__slide">
+                            <div class="blog__img">
+                                <img src="img/blog-1.jpg" alt="blog image">
+                            </div>
+                            <h3 class="blog__title">Які послуги ми надаємо?</h3>
+                            <div class="blog__excerpt">Стяжка напівсуха - тривалість виконання  - 1 день...</div>
+                            <a href="#" class="blog__link">Читати далі</a>
+                        </div>
+                        <div class="blog__slide">
+                            <div class="blog__img">
+                                <img src="img/blog-1.jpg" alt="blog image">
+                            </div>
+                            <h3 class="blog__title">Я -твій персональний порадник.</h3>
+                            <div class="blog__excerpt">Сьогодні хочу розказати тобі про графік роботи...</div>
+                            <a href="#" class="blog__link">Читати далі</a>
+                        </div>
+                        <div class="blog__slide">
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer" id="footer">
+            <div class="container footer__container">
+                <div class="contacts">
+                    <h2 class="contacts__title">Контакти</h2>
+                </div>
+                <div class="whatDoing">
+                    <div class="whatDoing__left">
+                        <div class="whatDoing__item"><a href="№" class="whatDoing__link">напівсуха стяжка</a></div>
+                        <div class="whatDoing__item"><a href="№" class="whatDoing__link">монтаж сантехніки та опалення</a></div>
+                    </div>
+                    <div class="whatDoing__right">
+                        <div class="whatDoing__item"><a href="№" class="whatDoing__link">ремонт під ключ</a></div>
+                        <div class="whatDoing__item"><a href="№" class="whatDoing__link">будівництво котеджів</a></div>
+                        <div class="whatDoing__item"><a href="№" class="whatDoing__link">ландшафтний дизайн</a></div>
+                    </div>
+                </div>
+                <div class="feedback">
+                    <h3 class="feedback__title">Запишіть контакти і ми Вам передзвонимо</h3>
+                    <form action="#" class="feedback__form">
+                        <input type="text" name="phoneFeedback" placeholder="Ваш телефон">
+                        <button type="submit" class="feedback__btn">Відправити</button>                
+                    </form>
+                </div>
+            </div>
+        </footer>
+        <div id="loader">
+            <img src="img/ripple.svg" alt="ripple">
+        </div>
+        <div class="modal" id="modalSend">
+            <div class="modal__window">
+                <h3 class="modal__title">Запишіть контакти і ми Вам передзвонимо</h3>
+                <form action="#" class="modal__form">
+                    <input type="text" name="phoneModal" placeholder="Ваш телефон">
+                    <button type="submit" class="modal__btn">Відправити</button>                
+                </form>
+            </div>
+        </div>
+        <div class="modal" id="modalThanks">
+            <div class="modal__window">
+                <h3 class="modal__title">Дякуємо!</h3>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>    
+</body>
+</html>
