@@ -1,6 +1,6 @@
 .works {
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 60px;
     background: @white;
 
     &__title {
@@ -9,4 +9,34 @@
         text-align: left;
         margin-bottom: 68px;
     }
+
+    &__slider {
+        transform: translate(0, -60px);
+    }
+
+    &__slide {
+        padding: 0 20px;
+    }
+
+    &-prev,
+    &-next {
+        width: 150px;
+        position: absolute;
+        z-index: 30;
+        bottom: 10px;
+        cursor: pointer;
+    }
+
+    &-prev {
+        right: 200px;
+    }
+
+    &-next {
+        right: 20px;
+    }
+}
+
+.works__slider .slick-current {
+    margin-bottom: 60px;
+    transform: translate(0, 60px);
 }

@@ -58,6 +58,12 @@ function fonts() {
         .pipe(gulp.dest('./build/fonts'));
 }
 
+
+function slick() {
+    return gulp.src('./src/slick/**/*')
+        .pipe(gulp.dest('./build/slick'));
+}
+
 function scripts(){
 	return gulp.src('./src/js/**/*')
 				.pipe(gulp.dest('./build/js'));
@@ -86,7 +92,7 @@ function grid(done){
 	done();
 }
 
-let build = gulp.parallel(html, styles, images, fonts, scripts, txt);
+let build = gulp.parallel(html, styles, images, fonts, slick, scripts, txt);
 let buildWithClean = gulp.series(clean, build);
 let dev = gulp.series(buildWithClean, watch);
 
