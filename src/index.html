@@ -351,9 +351,9 @@
         <footer class="footer" id="footer">
             <div class="container footer__container">
                 <div class="footer__items">
-                    <div class="contacts footer__item">
-                        <h2 class="contacts__title">Контакти</h2>
-                        <div class="data contacts__data">
+                    <div class="footer__item footer__item--contacts">
+                        <h2 class="footer__title">Контакти</h2>
+                        <div class="data footer__data">
                             <address class="data__item">
                                 <div class="data__icon">
                                     <img src="img/marker.svg" alt="marker">
@@ -366,7 +366,7 @@
                                 </div>
                                 <a href="mailto:mail@mail.com" class="data__mail">mail@mail.com</a>
                             </div>
-                            <div class="data__item">
+                            <div class="data__item data__item--clock">
                                 <div class="data__icon">
                                     <img src="img/clock.svg" alt="clock">
                                 </div>
@@ -377,28 +377,28 @@
                                     <img src="img/phone.svg" alt="phone">
                                 </div>
                                 <div class="data__phones">
-                                    <a href="tel:+380507000117" class="data__mail">050 7 000 117</a>
-                                    <a href="tel:+380684101552" class="data__mail">068 4 101 552</a>
+                                    <a href="tel:+380507000117" class="data__phone">050 7 000 117</a>
+                                    <a href="tel:+380684101552" class="data__phone">068 4 101 552</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="whatDoing footer__item footer__item--middle">
-                        <div class="whatDoing__left">
+                        <div class="whatDoing__items">
                             <div class="whatDoing__item"><a href="№" class="whatDoing__link">напівсуха стяжка</a></div>
-                            <div class="whatDoing__item"><a href="№" class="whatDoing__link">монтаж сантехніки та опалення</a></div>
+                            <div class="whatDoing__item"><a href="№" class="whatDoing__link">монтаж сантехніки <br>та опалення</a></div>
                         </div>
-                        <div class="whatDoing__right">
+                        <div class="whatDoing__items">
                             <div class="whatDoing__item"><a href="№" class="whatDoing__link">ремонт під ключ</a></div>
                             <div class="whatDoing__item"><a href="№" class="whatDoing__link">будівництво котеджів</a></div>
                             <div class="whatDoing__item"><a href="№" class="whatDoing__link">ландшафтний дизайн</a></div>
                         </div>
                     </div>
-                    <div class="feedback footer__item">
-                        <h3 class="feedback__title">Запишіть контакти і ми Вам передзвонимо</h3>
-                        <form action="#" class="feedback__form">
+                    <div class="footer__item">
+                        <h3 class="footer__title">Запишіть контакти і ми Вам передзвонимо</h3>
+                        <form action="#" class="footer__form">
                             <input type="text" name="phoneFeedback" placeholder="Ваш телефон">
-                            <button type="submit" class="feedback__btn">Відправити</button>                
+                            <button type="submit" class="footer__btn">Відправити</button>                
                         </form>
                     </div>
                 </div>
@@ -407,7 +407,7 @@
         <div id="loader">
             <img src="img/ripple.svg" alt="ripple">
         </div>
-        <div class="modal" id="modalSend">
+        <div class="modal d-none" id="modalSend">
             <div class="modal__window">
                 <h3 class="modal__title">Запишіть контакти і ми Вам передзвонимо</h3>
                 <form action="#" class="modal__form">
@@ -416,9 +416,9 @@
                 </form>
             </div>
         </div>
-        <div class="modal" id="modalThanks">
-            <div class="modal__window">
-                <h3 class="modal__title">Дякуємо!</h3>
+        <div class="modal-thanks d-none" id="modalThanks">
+            <div class="modal-thanks__window">
+                <h3 class="modal-thanks__title">Дякуємо!</h3>
             </div>
         </div>
     </div>

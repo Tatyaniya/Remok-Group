@@ -1,4 +1,6 @@
 .footer {
+    color: @gray;
+
     &__container {
         padding-top: 100px;
         padding-bottom: 100px;
@@ -7,14 +9,90 @@
 
     &__items {
         &:extend(.sg-row);
+        align-items: center;
     }
 
     &__item {
         &:extend(.sg-col);
-        .size(3.1);
+        .size(3.5);
+
+        &--contacts {
+            .size(2.8);
+            
+        }
 
         &--middle {
-            .size(5.8);
+            .size(5.7);
         }
+    }
+
+    &__title {
+        &:extend(.title-3);
+        margin-bottom: 40px;
+    }
+
+    & input {
+        &:extend(.form-input);
+        margin-bottom: 20px;
+
+        &::placeholder {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+            color: @gray;
+        }
+    }
+
+    &__btn {
+        &:extend(.btn-light);
+    }
+}
+
+.data {
+    &__item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 22px;
+
+        &--clock {
+            margin-bottom: 45px;
+        }
+    }
+
+    &__icon {
+        width: 17px;
+        margin-right: 12px;
+    }
+
+    &__phones {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__mail,
+    &__phone {
+        font-weight: 700;
+        color: inherit;
+    }
+
+    &__phone:first-child {
+        margin-bottom: 15px;
+    }
+}
+
+.whatDoing {
+    &:extend(.sg-row);
+
+    &__items {
+        &:extend(.sg-col);
+        .size(6);
+    }
+
+    &__item {
+        margin-bottom: 30px;
+    }
+
+    &__link {
+        font-weight: 700;
+        color: inherit;
     }
 }
