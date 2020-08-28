@@ -1,5 +1,20 @@
 .footer {
     &__container {
+        padding-top: 100px;
+        padding-bottom: 100px;
         border-top: 1px solid #333232;
+    }
+
+    &__items {
+        &:extend(.sg-row);
+    }
+
+    &__item {
+        &:extend(.sg-col);
+        .size(3.1);
+
+        &--middle {
+            .size(5.8);
+        }
     }
 }

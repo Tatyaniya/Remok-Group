@@ -1,0 +1,33 @@
+.blog {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    &__title {
+        &:extend(.title-2);
+        text-align-last: left;
+        margin-bottom: 60px;
+    }
+
+    &__img {
+        margin-bottom: 20px;
+    }
+
+    &__title {
+        &:extend(.title-3);
+        margin-bottom: 8px;
+    }
+
+    &__excerpt {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    &__link {
+        font-family: 'Myriad Pro', sans-serif;
+        font-size: 27px;
+        font-weight: 700;
+        color: @yellow;
+        padding-bottom: 2px;
+        border-bottom: 1px solid @yellow;
+    }
+}

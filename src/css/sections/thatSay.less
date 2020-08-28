@@ -1,3 +1,17 @@
 .whatSay {
+    padding-top: 100px;
+    padding-bottom: 200px;
     background: @white;
+
+    &__title {
+        &:extend(.title-2);
+        color: @black;
+        margin-bottom: 68px;
+    }
+
+    &__slide {
+        filter: drop-shadow(0px 1px 10px rgba(238, 215, 215, 0.25));
+        border-radius: 15px;
+        overflow: hidden; 
+    }
 }
