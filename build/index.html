@@ -3,8 +3,8 @@
 <head>
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <link rel="icon" href="img/logo.jpg" type="image/x-icon">
-    <link rel="shortcut icon" href="img/logo.jpg" type="image/x-icon">
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
     <title>Remok Group</title>
 	<link rel="stylesheet" href="css/styles.css">
 </head>
@@ -112,20 +112,22 @@
                                 <span class="calc__max" id="screedMax">15 см</span>
                             </div>
                         </div>
-                        <div class="calc__item calc__item--small">
+                        <div class="calc__item">
                             <h4 class="calc__title">Матеріал</h4>
-
-                            <input type="radio" name="material" id="riverSand" value="riverSand">
-                            <label for="riverSand" class="calc__radio">річковий митий пісок (відсів)</label>
-
-                            <input type="radio" name="material" id="whiteSand" value="whiteSand">
-                            <label for="whiteSand" class="calc__radio">рогатинський білий пісок</label>
-
-                            <input type="radio" name="material" id="mixedSand" value="mixedSand">
-                            <label for="mixedSand" class="calc__radio">мішаний пісок</label>
-                            
+                            <div class="calc__row">
+                                <input type="radio" name="material" id="riverSand" value="riverSand">
+                                <label for="riverSand" class="calc__radio">річковий митий пісок (відсів)</label>
+                            </div>
+                            <div class="calc__row">
+                                <input type="radio" name="material" id="whiteSand" value="whiteSand">
+                                <label for="whiteSand" class="calc__radio">рогатинський білий пісок</label>
+                            </div>
+                            <div class="calc__row">
+                                <input type="radio" name="material" id="mixedSand" value="mixedSand">
+                                <label for="mixedSand" class="calc__radio">мішаний пісок</label>
+                            </div> 
                         </div>
-                        <div class="calc__item calc__item--large">
+                        <div class="calc__item">
                             <button type="submit" class="calc__btn">Розрахувати вартість</button>
                         </div>
                     </form>
@@ -224,8 +226,6 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="stages__img"></div>
-                </div>
             </section>
             <section class="works" id="works">
                 <div class="container works__container">
