@@ -1,5 +1,6 @@
 .calc {
     margin-bottom: 120px;
+    position: static;
 
     &__container {
         padding: 60px 55px 52px;
@@ -76,11 +77,52 @@
         display: flex;
         align-items: center;
         margin-bottom: 10px;
+        position: relative;
+
+        & input {
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+        }
+    }
+
+    &__radio {
+        cursor: pointer;
+        user-select: none;
+        padding-left: 26px;
+        position: relative;
+
+        &:before {
+            display: block;
+            width: 17px;
+            height: 17px;
+            content: '';
+            flex-shrink: 0;
+            flex-grow: 0;
+            //background: #fff;
+            position: absolute;
+            top: 50%;
+            Left: 0;
+            transform: translateY(-50%);
+            background: url('../img/not-chek.svg') no-repeat center center;
+        }
+    }
+
+    &__row input:checked+.calc__radio:before {
+        background: url('../img/chek.svg') no-repeat center center;
     }
     
     &__btn {
         &:extend(.btn-light);
         margin-top: 30px;
+
+        &:hover {
+            &:extend(.btn-light-hover);
+        }
+
+        &:active {
+            &:extend(.btn-light-active);
+        }
     }
 
     &__text {
@@ -131,5 +173,13 @@
 
     &__btn {
         &:extend(.btn-light);
+
+        &:hover {
+            &:extend(.btn-light-hover);
+        }
+
+        &:active {
+            &:extend(.btn-light-active);
+        }
     }
 }

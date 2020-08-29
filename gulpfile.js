@@ -15,6 +15,7 @@ let isMap = process.argv.includes('--map');
 let isMinify = process.argv.includes('--clean');
 let isSync = process.argv.includes('--sync');
 
+
 function clean(){
 	return del('./build/*');
 }
@@ -57,7 +58,6 @@ function fonts() {
     return gulp.src('./src/fonts/**/*')
         .pipe(gulp.dest('./build/fonts'));
 }
-
 
 function slick() {
     return gulp.src('./src/slick/**/*')
