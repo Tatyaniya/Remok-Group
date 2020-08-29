@@ -80,6 +80,18 @@
     &__phone {
         font-weight: 700;
         color: inherit;
+        padding-bottom: 4px;
+
+        &:extend(.link-hover);
+
+        &:after {
+            &:extend(.link-hover-after);
+            border-bottom: 1px solid @gray;
+        }
+
+        &:hover::after {
+            &:extend(.link-hover-width);
+        }
     }
 
     &__phone:first-child {
@@ -102,5 +114,17 @@
     &__link {
         font-weight: 700;
         color: inherit;
+        padding-bottom: 4px;
+
+        &:extend(.link-hover);
+
+        &:after {
+            &:extend(.link-hover-after);
+            border-bottom: 1px solid @gray;
+        }
+
+        &:hover::after {
+            &:extend(.link-hover-width);
+        }
     }
 }

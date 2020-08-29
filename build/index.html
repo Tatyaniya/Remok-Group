@@ -26,7 +26,7 @@
                             <a href="#works">Фото робіт</a>
                         </li>
                         <li>
-                            <a href="#">Про компанію</a>
+                            <a href="#blog">Про компанію</a>
                         </li>
                         <li>
                             <a href="#calc">Розрахунок вартості</a>
@@ -289,7 +289,7 @@
                     </div>
                 </div>
             </section>
-            <section class="blog">
+            <section class="blog" id="blog">
                 <div class="container blog__container">
                     <h2 class="blog__title">Блог</h2>
                     <div class="blog__slider">
@@ -388,20 +388,26 @@
         <div id="loader">
             <img src="img/ripple.svg" alt="ripple">
         </div>
-        <div class="modal d-none" id="modalSend">
-            <div class="modal__window">
-                <h3 class="modal__title">Запишіть контакти і ми Вам передзвонимо</h3>
-                <form action="#" class="modal__form">
-                    <input type="text" name="phoneModal" placeholder="Ваш телефон">
-                    <button type="submit" class="modal__btn">Відправити</button>                
-                </form>
+        <div class="modal-overlay d-none">
+            <div class="modal" id="modalSend">
+                <div class="modal__window">
+                    <h3 class="modal__title">Запишіть контакти і ми Вам передзвонимо</h3>
+                    <form action="#" class="modal__form">
+                        <input type="text" name="phoneModal" placeholder="Ваш телефон">
+                        <button type="submit" class="modal__btn">Відправити</button>                
+                    </form>
+                </div>
             </div>
         </div>
-        <div class="modal-thanks d-none" id="modalThanks">
-            <div class="modal-thanks__window">
-                <h3 class="modal-thanks__title">Дякуємо!</h3>
+        
+        <div class="modal-overlay-thanks d-none">
+            <div class="modal-thanks" id="modalThanks">
+                <div class="modal-thanks__window">
+                    <h3 class="modal-thanks__title">Дякуємо!</h3>
+                </div>
             </div>
         </div>
+        
     </div>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
