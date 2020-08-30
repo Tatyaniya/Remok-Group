@@ -3,8 +3,12 @@
     padding-bottom: 90px;
 
     .xxl-block({
-        min-height: 87vh;
-        padding-bottom: 60px;
+        min-height: 86vh;
+        padding-bottom: 70px;
+    });
+
+    .md-block({
+        min-height: 68vh;
     });
     
     &__img {
@@ -15,6 +19,10 @@
             width: 800px;
             margin-bottom: 30px;
         });
+
+        .md-block({
+            width: 90%;
+        });
     }
 
     &__title {
@@ -23,6 +31,10 @@
         letter-spacing: 0.32em;
         text-align: center;
         margin-bottom: 15px;
+
+        .md-block({
+            font-size: 62px;
+        });
     }
 
     &__subtitle {
@@ -30,6 +42,10 @@
         letter-spacing: 0.24em;
         text-align: center;
         margin-bottom: 35px;
+
+        .md-block({
+            font-size: 28px;
+        });
     }
 
     &__btns {

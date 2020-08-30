@@ -23,12 +23,35 @@
 
         &--contacts {
             .size(2.8);
-            
         }
 
         &--middle {
             .size(5.7);
         }
+
+        .md-block({
+            .size(6);
+            margin-bottom: 40px;
+        });
+
+        &--last {
+            .md-block({
+                .size(12);
+                margin-bottom: 0;
+            });
+
+            & .footer__title {
+                text-align: center;
+            }
+        }
+    }
+
+    &__form {
+        .md-block({
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        });
     }
 
     &__title {
@@ -110,6 +133,10 @@
     &__items {
         &:extend(.sg-col);
         .size(6);
+
+        .md-block({
+            .size(12);
+        });
     }
 
     &__item {

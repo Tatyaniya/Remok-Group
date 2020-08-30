@@ -18,6 +18,19 @@
                     <img src="img/logo.png" alt="Remok Group">
                 </a>
                 <nav class="menu header__menu">
+                    <div class="hamburger">
+                        <svg class="ham hamRotate ham4" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
+                            <path
+                                class="line top"
+                                d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20" />
+                            <path
+                                class="line middle"
+                                d="m 70,50 h -40" />
+                            <path
+                                class="line bottom"
+                                d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20" />
+                        </svg>
+                    </div>
                     <ul class="menu__list">
                         <li>
                             <a href="#services">Послуги</a>
@@ -61,61 +74,63 @@
             </section>
             <section class="calc" id="calc">
                 <div class="container calc__container">
-                    <form action="#" class="calc__form">
-                        <div class="calc__item calc__item--small">
-                            <h4 class="calc__title">Площа</h4>
-                            <input type="text" class="calc__input" value="110 кв.м">
-                            <div id="area" class="calc__range">
-                                <span></span>
+                    <div class="calc__content">
+                        <form action="#" class="calc__form">
+                            <div class="calc__item calc__item--small">
+                                <h4 class="calc__title">Площа</h4>
+                                <input type="text" class="calc__input" value="110 кв.м">
+                                <div id="area" class="calc__range">
+                                    <span></span>
+                                </div>
+                                <div class="calc__value">
+                                    <span class="calc__min" id="areaMin">36 кв.м</span>
+                                    <span class="calc__max" id="areaMax">10 000 кв.м</span>
+                                </div>
                             </div>
-                            <div class="calc__value">
-                                <span class="calc__min" id="areaMin">36 кв.м</span>
-                                <span class="calc__max" id="areaMax">10 000 кв.м</span>
+                            <div class="calc__item calc__item--large">
+                                <h4 class="calc__title">Середня товщина стяжки</h4>
+                                <input type="text" class="calc__input" value="10 cм">
+                                <div id="screed" class="calc__range"                    >
+                                    <span></span>
+                                </div>
+                                <div class="calc__value">
+                                    <span class="calc__min" id="screedMin">6 см</span>
+                                    <span class="calc__max" id="screedMax">15 см</span>
+                                </div>
+                            </div>
+                            <div class="calc__item">
+                                <h4 class="calc__title">Матеріал</h4>
+                                <div class="calc__row">
+                                    <input type="radio" name="material" id="riverSand" value="riverSand">
+                                    <label for="riverSand" class="calc__radio">річковий митий пісок (відсів)</label>
+                                </div>
+                                <div class="calc__row">
+                                    <input type="radio" name="material" id="whiteSand" value="whiteSand">
+                                    <label for="whiteSand" class="calc__radio">рогатинський білий пісок</label>
+                                </div>
+                                <div class="calc__row">
+                                    <input type="radio" name="material" id="mixedSand" value="mixedSand">
+                                    <label for="mixedSand" class="calc__radio">мішаний пісок</label>
+                                </div> 
+                            </div>
+                            <div class="calc__item calc__item--last">
+                                <button type="submit" class="calc__btn">Розрахувати вартість</button>
+                            </div>
+                        </form>
+                        <div class="get calc__get">
+                            <div class="get__cost">Вартість роботи: 
+                                <span>7250 грн</span>
+                            </div>
+                            <div class="get__receiveByMail">
+                                <h4 class="get__title">Отримати розрахунок на пошту</h4>
+                                <form action="#" class="get__form">
+                                    <input type="email" name="email" placeholder="Ваш e-mail">
+                                    <button type="submit" class="get__btn">Відправити</button>
+                                </form>
                             </div>
                         </div>
-                        <div class="calc__item calc__item--large">
-                            <h4 class="calc__title">Середня товщина стяжки</h4>
-                            <input type="text" class="calc__input" value="10 cм">
-                            <div id="screed" class="calc__range"                    >
-                                <span></span>
-                            </div>
-                            <div class="calc__value">
-                                <span class="calc__min" id="screedMin">6 см</span>
-                                <span class="calc__max" id="screedMax">15 см</span>
-                            </div>
-                        </div>
-                        <div class="calc__item">
-                            <h4 class="calc__title">Матеріал</h4>
-                            <div class="calc__row">
-                                <input type="radio" name="material" id="riverSand" value="riverSand">
-                                <label for="riverSand" class="calc__radio">річковий митий пісок (відсів)</label>
-                            </div>
-                            <div class="calc__row">
-                                <input type="radio" name="material" id="whiteSand" value="whiteSand">
-                                <label for="whiteSand" class="calc__radio">рогатинський білий пісок</label>
-                            </div>
-                            <div class="calc__row">
-                                <input type="radio" name="material" id="mixedSand" value="mixedSand">
-                                <label for="mixedSand" class="calc__radio">мішаний пісок</label>
-                            </div> 
-                        </div>
-                        <div class="calc__item calc__item--last">
-                            <button type="submit" class="calc__btn">Розрахувати вартість</button>
-                        </div>
-                    </form>
-                    <div class="get calc__get">
-                        <div class="get__cost">Вартість роботи: 
-                            <span>7250 грн</span>
-                        </div>
-                        <div class="get__receiveByMail">
-                            <h4 class="get__title">Отримати розрахунок на пошту</h4>
-                            <form action="#" class="get__form">
-                                <input type="email" name="email" placeholder="Ваш e-mail">
-                                <button type="submit" class="get__btn">Відправити</button>
-                            </form>
-                        </div>
+                        <div class="calc__text">Вартість робіт за межами м. Івано-Франківськ обговорюється індивідуально</div>
                     </div>
-                    <div class="calc__text">Вартість робіт за межами м. Івано-Франківськ обговорюється індивідуально</div>
                 </div>
             </section>
             <section class="services" id="services">
@@ -375,7 +390,7 @@
                             <div class="whatDoing__item"><a href="№" class="whatDoing__link">ландшафтний дизайн</a></div>
                         </div>
                     </div>
-                    <div class="footer__item">
+                    <div class="footer__item footer__item--last">
                         <h3 class="footer__title">Запишіть контакти і ми Вам передзвонимо</h3>
                         <form action="#" class="footer__form">
                             <input type="text" name="phoneFeedback" placeholder="Ваш телефон">

@@ -1,6 +1,5 @@
 $( function() {
 
-
     /***** Плавная прокрутка *****/
 
     $('.offer__btn--cost, .menu__list li a').click( e => {
@@ -67,21 +66,34 @@ $( function() {
         slidesToScroll: 1,
         prevArrow: '<img src="img/arrow-prev.png" alt="prev" class="blog-prev">',
         nextArrow: '<img src="img/arrow-next.png" alt="next" class="blog-next">',
+
+        responsive: [
+            {
+              breakpoint: 992,
+              settings: {
+                slidesToShow: 2,
+              }
+            },
+            {
+              breakpoint: 576,
+              settings: {
+                slidesToShow: 1,
+              }
+            }
+        ]
     });
         
 
-    // $('#humburger-header').click(function(){
-    //     $( ".navigation__nav" ).toggleClass("navigation__nav-open");
-    // });
+    $('.hamburger').click(function(){
+        $( ".menu__list" ).toggleClass("menu-open");
+    });
 
-    // $('#humburger-footer').click(function(){
-    //     $( ".footer__nav" ).toggleClass("footer__nav-open");
-    // });
-
-    // if ($(window).width() < 960)
-    // { 
-			
-    // }
-
- 
+    if ($(window).width() < 992) { 
+		$('.menu__list li a').click(function(){
+            console.log(1);
+            $('.ham').removeClass('active');
+            $( ".menu__list" ).removeClass("menu-open");
+        });	
+    }
+    
 });
