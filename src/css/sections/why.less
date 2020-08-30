@@ -6,11 +6,19 @@
     &__title {
         &:extend(.title-2);
         margin-bottom: 70px;
+
+        .lg-block({
+            margin-bottom: 60px;
+        });
     }
 
     &__list {
         &:extend(.sg-row);
         margin-bottom: 80px;
+
+        .lg-block({
+            margin-bottom: 70px;
+        });
     }
 
     &__item {
@@ -25,6 +33,12 @@
         width: 68px;
         height: 68px;
         margin-bottom: 40px;
+
+        .lg-block({
+            width: 55px;
+            height: 55px;
+            margin-bottom: 35px;
+        });
     }
 
     &__desc {
@@ -32,6 +46,10 @@
         font-weight: 600;
         line-height: 42px;
         text-align: center;
+
+        .lg-block({
+            font-size: 23px;
+        });
     }
 
     &__text {
@@ -39,5 +57,9 @@
         font-weight: 600;
         color: @yellow;
         text-align: center;
+
+        .lg-block({
+            font-size: 26px;
+        });
     }
 }

@@ -2,6 +2,11 @@
     padding-top: 100px;
     padding-bottom: 100px;
 
+    .xl-block({
+        padding-top: 90px;
+        padding-bottom: 90px;
+    });
+
     &__slide {
         padding: 0 10px 5px;
     }
@@ -13,10 +18,18 @@
         z-index: 30;
         top: -66px;
         cursor: pointer;
+
+        .lg-block({
+            width: 130px;
+        });
     }
 
     &-prev {
         right: 180px;
+
+        .lg-block({
+            right: 160px;
+        });
     }
 
     &-next {
@@ -42,6 +55,7 @@
 
     &__excerpt {
         font-size: 20px;
+        font-weight: 600;
         margin-bottom: 15px;
     }
 
@@ -50,7 +64,22 @@
         font-size: 24px;
         font-weight: 700;
         color: @yellow;
-        padding-bottom: 2px;
-        border-bottom: 1px solid @yellow;
+        padding-bottom: 4px;
+
+        &:hover {
+            color: @yellow;
+        }
+        
+        &:extend(.link-hover);
+
+        &:after {
+            &:extend(.link-hover-after);
+            width: 100%;
+        }
+
+        &:hover::after {
+            &:extend(.link-hover-width);
+            width: 0;
+        }
     }
 }

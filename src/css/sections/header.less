@@ -13,6 +13,10 @@
     &__logo {
         width: 82px;
         margin-right: 80px;
+
+        .lg-block({
+            margin-right: 42px;
+        });
     }
 }
 
@@ -21,6 +25,10 @@
     display: flex;
     align-items: center;
 
+    .lg-block({
+        width: 71%;
+    });
+
     &__list {
         width: 100%;
         display: flex;
@@ -28,6 +36,10 @@
 
         & li a {
             padding-bottom: 4px;
+
+            .lg-block({
+                font-size: 16px;
+            });
 
             &:hover {
                 color: @yellow;

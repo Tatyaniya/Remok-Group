@@ -11,6 +11,10 @@
         flex-direction: column;
         height: 705px;
         margin-bottom: 18px;
+
+        .xl-block({
+            height: 670px;
+        });
     }
 
     &__item {
@@ -23,8 +27,18 @@
         padding-top: 47px;
         padding-left: 30px;
 
+        .xl-block({
+            height: 300px;
+            padding-top: 43px;
+            margin-bottom: 30px;
+        });
+
         &--large {
            height: 406px;
+
+           .xl-block({
+                height: 390px;
+            });
 
             & .services__icon {
                 width: 120px;
@@ -47,6 +61,10 @@
 
         &--small {
             height: 214px;
+
+            .xl-block({
+                height: 210px;
+            });
         }
     }
 
@@ -70,8 +88,27 @@
         font-size: 27px;
         font-weight: 700;
         color: @yellow;
-        padding-bottom: 2px;
-        border-bottom: 1px solid @yellow;
+        padding-bottom: 4px;
+
+        .xl-block({
+            font-size: 25px;
+        });
+
+        &:hover {
+            color: @yellow;
+        }
+        
+        &:extend(.link-hover);
+
+        &:after {
+            &:extend(.link-hover-after);
+            width: 100%;
+        }
+
+        &:hover::after {
+            &:extend(.link-hover-width);
+            width: 0;
+        }
     }
 
     &__text {
