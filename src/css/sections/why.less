@@ -3,6 +3,10 @@
     padding-bottom: 100px;
     background: url('../img/why-bg.jpg') no-repeat center top/ cover;
 
+    .sm-block({
+        bottom: -46px;
+    });
+
     &__title {
         &:extend(.title-2);
         margin-bottom: 70px;
@@ -23,6 +27,10 @@
         .md-block({
             margin-bottom: 40px;
         });
+
+        .xs-block({
+            margin-bottom: 30px;
+        });
     }
 
     &__item {
@@ -36,6 +44,14 @@
             .size(6);
             margin-bottom: 40px;
         });
+
+        .sm-block({
+            .size(12);
+        });
+
+        .xs-block({
+            margin-bottom: 35px;
+        });
     }
 
     &__icon {
@@ -48,6 +64,12 @@
             height: 55px;
             margin-bottom: 35px;
         });
+
+        .sm-block({
+            width: 50px;
+            height: 50px;
+            margin-bottom: 20px;
+        });
     }
 
     &__desc {
@@ -59,6 +81,20 @@
         .lg-block({
             font-size: 23px;
         });
+
+        & br {
+            .sm-block({
+                display: none;
+            });
+        }
+
+        .sm-block({
+            font-size: 24px;
+        });
+
+        .xs-block({
+            font-size: 20px;
+        });
     }
 
     &__text {
@@ -69,6 +105,10 @@
 
         .lg-block({
             font-size: 26px;
+        });
+
+        .sm-block({
+            font-size: 22px;
         });
     }
 }

@@ -35,6 +35,10 @@
         .md-block({
             font-size: 62px;
         });
+
+        .sm-block({
+            font-size: 50px;
+        });
     }
 
     &__subtitle {
@@ -46,16 +50,30 @@
         .md-block({
             font-size: 28px;
         });
+
+        .sm-block({
+            font-size: 25px;
+        });
     }
 
     &__btns {
         display: flex;
         justify-content: center;
+
+        .sm-block({
+            flex-direction: column;
+            align-items: center;
+        });
     }
 
     &__btn--contact {
         margin-right: 40px;
         &:extend(.btn-light);
+
+        .sm-block({
+            margin-right: 0;
+            margin-bottom: 30px;
+        });
 
         &:hover {
             &:extend(.btn-light-hover);

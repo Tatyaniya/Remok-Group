@@ -40,9 +40,16 @@ $( function() {
         infinite: true,
         slidesToShow: 2,
         slidesToScroll: 1,
-        lazyLoad: 'ondemand',
         prevArrow: '<img src="img/arrow-prev.png" alt="prev" class="works-prev">',
         nextArrow: '<img src="img/arrow-next.png" alt="next" class="works-next">',
+        responsive: [
+            {
+              breakpoint: 769,
+              settings: {
+                slidesToShow: 1,
+              }
+            }
+        ]
     });
 
     /*** Слайдер "Что говорят клиенты" ***/
@@ -56,6 +63,14 @@ $( function() {
         centerPadding: '10px',
         prevArrow: '<img src="img/arrow-prev.png" alt="prev" class="whatSay-prev">',
         nextArrow: '<img src="img/arrow-next.png" alt="next" class="whatSay-next">',
+        responsive: [
+            {
+              breakpoint: 769,
+              settings: {
+                slidesToShow: 1,
+              }
+            }
+        ]
     });
 
     /*** Слайдер в блоге ***/
@@ -75,7 +90,7 @@ $( function() {
               }
             },
             {
-              breakpoint: 576,
+              breakpoint: 769,
               settings: {
                 slidesToShow: 1,
               }
@@ -86,14 +101,15 @@ $( function() {
 
     $('.hamburger').click(function(){
         $( ".menu__list" ).toggleClass("menu-open");
-    });
+    });        
 
-    if ($(window).width() < 992) { 
-		$('.menu__list li a').click(function(){
-            console.log(1);
+    
+    $('.menu__list li a').click(function(){
+        if ($(window).width() < 992) { 
             $('.ham').removeClass('active');
             $( ".menu__list" ).removeClass("menu-open");
-        });	
-    }
+        }
+    });
+
     
 });

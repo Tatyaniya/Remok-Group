@@ -26,10 +26,13 @@ module.exports = {
             width: "768px",
             fields: "15px"
         },
-        xs576: {
+        xs: {
             width: "576px"
         },
-        xxs400: {
+        xxs: {
+            width: "460px"
+        },
+        xxss: {
             width: "400px"
         }
 	},

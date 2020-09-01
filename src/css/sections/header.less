@@ -22,6 +22,10 @@
         .md-block({
             margin-right: 0;
         });
+
+        .xs-block({
+            width: 78px;
+        });
     }
 }
 
@@ -83,6 +87,10 @@
     & li {
         margin-bottom: 35px;
     }
+
+    .xs-block({
+        width: 100%;
+    });
 }
 
 .phones {
@@ -93,6 +101,11 @@
 
     &__link {
         padding-bottom: 4px;
+
+        .xs-block({
+           font-size: 16px;
+           text-align: right;
+        });
 
         &:hover {
             color: @yellow;

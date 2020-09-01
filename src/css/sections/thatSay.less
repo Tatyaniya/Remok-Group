@@ -42,6 +42,10 @@
         .lg-block({
             width: 130px;
         });
+
+        .xs-block({
+            width: 100px;
+        });
     }
 
     &-prev {
@@ -49,6 +53,10 @@
 
         .lg-block({
             transform: translateX(-145px);
+        });
+
+        .xs-block({
+            transform: translateX(-115px);
         });
     }
 
@@ -59,6 +67,11 @@
     & .slick-track {
         padding-top: 40px;
         padding-bottom: 40px;
+
+        .sm-block({
+            padding-top: 0;
+            padding-bottom: 0;
+        });
     }
     & .slick-slide {
         transition: transform 0.2s ease;
@@ -69,6 +82,10 @@
         
         .xl-block({
             margin-top: 0;
+        });
+
+        .sm-block({
+            transform: scale(1);
         });
     }
 }
