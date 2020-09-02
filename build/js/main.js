@@ -7,7 +7,7 @@ $( function() {
 		elementClick = $(e.currentTarget).attr("href");
         destination = $(elementClick).offset().top;
         destination -= 116;
-        $("body,html").animate({scrollTop: destination }, 800);
+        $('body,html').animate({scrollTop: destination }, 800);
     });
 
 
@@ -97,19 +97,34 @@ $( function() {
             }
         ]
     });
-        
+   
+    /*** Гамбургер ***/
 
     $('.hamburger').click(function(){
-        $( ".menu__list" ).toggleClass("menu-open");
+        $( '.menu__list' ).toggleClass('menu-open');
     });        
 
     
     $('.menu__list li a').click(function(){
         if ($(window).width() < 992) { 
             $('.ham').removeClass('active');
-            $( ".menu__list" ).removeClass("menu-open");
+            $( '.menu__list').removeClass('menu-open');
         }
     });
 
+    /*** Анимация в хедере ***/
+
+    if ($(window).width() > 992) { 
+
+        $(window).scroll(function() {
+            
+            $('.header__logo').animate({
+                opacity: 1,
+            }, 800);
+            $('.menu__list').animate({
+                left: '0',
+            }, 800);
+        });
+    }
     
 });

@@ -76,51 +76,39 @@
             <section class="calc" id="calc">
                 <div class="container calc__container">
                     <div class="calc__content">
-                        <form action="#" class="calc__form">
+                        <form action="#" class="calc__form" @submit.prevent="showResult()">
                             <div class="calc__item calc__item--small">
                                 <h4 class="calc__title">Площа</h4>
-                                <input type="text" class="calc__input" value="110 кв.м">
-                                <div id="area" class="calc__range">
-                                    <span></span>
-                                </div>
-                                <div class="calc__value">
-                                    <span class="calc__min" id="areaMin">36 кв.м</span>
-                                    <span class="calc__max" id="areaMax">10 000 кв.м</span>
-                                </div>
+                                <input type="number" :readonly="blockedForm" class="calc__input" min="2" max="10000" value="110" v-model="square">
+                                <span class="calc__label">м<sup>2</sup></span>
                             </div>
                             <div class="calc__item calc__item--large">
                                 <h4 class="calc__title">Середня товщина стяжки</h4>
-                                <input type="text" class="calc__input" value="10 cм">
-                                <div id="screed" class="calc__range"                    >
-                                    <span></span>
-                                </div>
-                                <div class="calc__value">
-                                    <span class="calc__min" id="screedMin">6 см</span>
-                                    <span class="calc__max" id="screedMax">15 см</span>
-                                </div>
+                                <input type="number" :readonly="blockedForm" class="calc__input" min="6" max="30" v-model="height">
+                                <span class="calc__label">см.</span>
                             </div>
                             <div class="calc__item">
                                 <h4 class="calc__title">Матеріал</h4>
                                 <div class="calc__row">
-                                    <input type="radio" name="material" id="riverSand" value="riverSand">
+                                    <input type="radio" :readonly="blockedForm" name="material" id="riverSand" value="0" v-model="sand">
                                     <label for="riverSand" class="calc__radio">річковий митий пісок (відсів)</label>
                                 </div>
                                 <div class="calc__row">
-                                    <input type="radio" name="material" id="whiteSand" value="whiteSand">
+                                    <input type="radio" :readonly="blockedForm" name="material" id="whiteSand" value="1" v-model="sand">
                                     <label for="whiteSand" class="calc__radio">рогатинський білий пісок</label>
                                 </div>
                                 <div class="calc__row">
-                                    <input type="radio" name="material" id="mixedSand" value="mixedSand">
+                                    <input type="radio" :readonly="blockedForm" name="material" id="mixedSand" value="2" v-model="sand">
                                     <label for="mixedSand" class="calc__radio">мішаний пісок</label>
                                 </div> 
                             </div>
                             <div class="calc__item calc__item--last">
-                                <button type="submit" class="calc__btn">Розрахувати вартість</button>
+                                <input type="submit" :readonly="blockedForm" class="calc__btn" value="Розрахувати вартість">
                             </div>
                         </form>
                         <div class="get calc__get">
                             <div class="get__cost">Вартість роботи: 
-                                <span>7250 грн</span>
+                                <span>{{ price }} грн</span>
                             </div>
                             <div class="get__receiveByMail">
                                 <h4 class="get__title">Отримати розрахунок на пошту</h4>
@@ -427,13 +415,8 @@
     </div>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
-    <!-- Зависимости для ползунков -->
-	<script src="js/jQ-ui-widget.min.js"></script>
-	<script src="js/jQ-ui-mouse.min.js"></script>
-	<!-- Jquery-ui.min -->
-	<script src="js/jquery-ui.min.js"></script>
-	<!-- Ползунки для мобилок -->
-	<script src="js/jQ-UI-Touch.min.js"></script>
-    <script src="js/main.js"></script>    
+    <script src="js/main.js"></script>
+    <script src="js/vue.min.js"></script>
+    <script src="js/calc.js"></script> 
 </body>
 </html>
