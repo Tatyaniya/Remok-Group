@@ -114,6 +114,7 @@
 
     &__link {
         padding-bottom: 4px;
+        &:extend(.link-hover);
 
         .xs-block({
            font-size: 16px;
@@ -121,13 +122,12 @@
 
         .md-block({
             margin-left: 0;
-         });
+        });
 
         &:hover {
             color: @yellow;
         }
-        &:extend(.link-hover);
-
+        
         &:after {
             &:extend(.link-hover-after);
         }
